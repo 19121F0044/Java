@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import java.lang.Math;
+class Solution
+{
+	public static void main(String[] args)
+	{
+		Scanner scn=new Scanner(System.in);
+		System.out.print("Enter the Number: ");
+		int num=scn.nextInt();
+		int temp1=num;
+		int temp=num;
+
+		int count=0;
+		while(temp>0)
+		{
+			
+			temp=temp/10;
+			count++;
+
+		}
+		int result=0;
+		while(num>0)
+		{
+			int rem=num%10;
+			result=result+(int)(Math.pow(rem,count));
+			num=num/10;
+		}
+		System.out.println(result);
+		System.out.println(temp);
+		System.out.println(num);
+		if(temp1==result)
+		{
+			System.out.print("It is armsStrong Number ");
+		}
+		else
+		{
+			System.out.print("It is not");
+		}
+
+	}
+}
