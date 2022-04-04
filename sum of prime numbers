@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class Solution
+{
+	
+	public static void main(String[] args)
+	{
+		Scanner scn=new Scanner(System.in);
+		System.out.println("Enter the lower range: ");
+		int lower=scn.nextInt();
+		System.out.println("Enter the upper range: ");
+		int upper=scn.nextInt();
+		int sum=0;
+		for(int i=lower;i<=upper;i++)
+		{
+			if(i<=1)
+			{
+				continue;
+			}
+
+			boolean flag=true;
+			for(int j=2;j<=i/2;j++)
+			{
+				if(i%j==0)
+				{
+					flag=false;
+					break;
+				}
+			}
+			if(flag)
+		    {
+				sum=sum+i;
+				
+				
+		    }
+		}
+		System.out.println("sum of PrimeNumbers is: "+sum);
+		
+
+		
+	}
+
+}
